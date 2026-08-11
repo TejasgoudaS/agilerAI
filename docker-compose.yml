@@ -1,0 +1,23 @@
+# Local Docker testing only — Render builds server/Dockerfile directly via
+# render.yaml and doesn't use this file. Handy for verifying the image builds
+# and boots correctly on your own machine, and for local dev with real SQLite
+# persistence (production on Render uses a free managed Postgres instead —
+# see DEPLOYMENT.md — since Render's free web services have no persistent disk).
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      # Redirects the SQLite file into the bind-mounted ./data/db volume below.
+      # (database.py reads DATABASE_URL and already supports this override.)
+      DATABASE_URL: sqlite:////app/data/ai_agile.db
+    volumes:
+      - ./data/db:/app/data                 # SQLite database file
+      - ./data/cache:/app/server/.cache     # RAG embedding cache (rag_engine.py)
+      - ./data/models:/app/server/models    # trained velocity_calibrator.joblib

@@ -3,6 +3,10 @@ import { create } from 'zustand';
 // Pull stored token from localStorage (persists across page refreshes)
 const storedToken = localStorage.getItem('ai_jira_token') || null;
 
+// Keep-alive ping toggle — off by default so it doesn't silently burn free-tier
+// hours; persists across reloads so flipping it on the night before a demo sticks.
+const storedKeepAlive = localStorage.getItem('agiler_keep_alive') === 'true';
+
 export const useAppStore = create((set, get) => ({
   // ── Auth State ───────────────────────────────────────────────────────
   authToken: storedToken,
@@ -14,6 +18,14 @@ export const useAppStore = create((set, get) => ({
     set({ authToken: token, isAuthenticated: !!token });
   },
   setCurrentUser: (user) => set({ currentUser: user }),
+
+  // ── Backend Keep-Alive (demo mode) ──────────────────────────────────────
+  keepAliveEnabled: storedKeepAlive,
+  setKeepAliveEnabled: (enabled) => {
+    localStorage.setItem('agiler_keep_alive', enabled ? 'true' : 'false');
+    set({ keepAliveEnabled: enabled });
+  },
+
   logout: () => {
     localStorage.removeItem('ai_jira_token');
     set({

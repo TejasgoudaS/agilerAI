@@ -3,11 +3,12 @@ import { Toaster } from 'react-hot-toast';
 import { useAppStore } from './store/appStore';
 import { usePRDProcessor } from './hooks/usePRDProcessor';
 import { useJiraSync } from './hooks/useJiraSync';
+import { prewarmAgentServer } from './lib/aiClient';
 import {
   Sparkles, KanbanSquare, GitMerge, LayoutDashboard,
   Rocket, FileWarning, CheckCircle2, ExternalLink, X, RefreshCcw, Network,
   FolderGit2, History, Settings, LogOut, ChevronDown, User,
-  GitBranch, Plug, BarChart2, ShieldCheck
+  GitBranch, Plug, BarChart2, ShieldCheck, Zap, ZapOff
 } from 'lucide-react';
 
 import LandingPage from './components/LandingPage';
@@ -39,6 +40,7 @@ export default function App() {
     authToken, isAuthenticated, currentUser, setCurrentUser, logout,
     setIsHistoryOpen, setIsSettingsOpen,
     setIsGitHubIndexerOpen, setIsIntegrationsPanelOpen,
+    keepAliveEnabled, setKeepAliveEnabled,
   } = useAppStore();
 
   const { processPRD } = usePRDProcessor();
@@ -55,6 +57,25 @@ export default function App() {
         .catch(() => {});
     }
   }, [authToken]);
+
+  // One-shot: always ping once on load regardless of the toggle below, so the
+  // cold-start wake-up at least overlaps with the user reading the page /
+  // uploading a PRD instead of only starting once they click "Generate."
+  useEffect(() => {
+    prewarmAgentServer();
+  }, []);
+
+  // Demo mode: repeated keep-alive ping, user-toggleable (see header button).
+  // Off by default — this is an opt-in for "demo day" so the free-tier
+  // instance never sleeps mid-presentation; left on by accident it just keeps
+  // pinging harmlessly, but it does count toward Render's free instance-hours,
+  // so it isn't left running by default.
+  useEffect(() => {
+    if (!keepAliveEnabled) return;
+    prewarmAgentServer();
+    const interval = setInterval(prewarmAgentServer, 4 * 60 * 1000); // every 4 min, under Render's 15-min sleep threshold
+    return () => clearInterval(interval);
+  }, [keepAliveEnabled]);
 
   const handleGenerate = () => {
     if (prdText) processPRD();
@@ -129,6 +150,23 @@ export default function App() {
                   <FolderGit2 className="w-4 h-4 text-indigo-400" />
                   <span>{codebaseStats ? `${codebaseStats.fileCount} Files` : 'Index Codebase'}</span>
                   {codebaseStats && <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>}
+                </button>
+
+                {/* Keep-Alive Toggle (demo mode) */}
+                <button
+                  onClick={() => setKeepAliveEnabled(!keepAliveEnabled)}
+                  className={`hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all cursor-pointer shadow-sm border ${
+                    keepAliveEnabled
+                      ? 'bg-emerald-500/15 border-emerald-500/40 text-emerald-300'
+                      : 'bg-slate-900 border-slate-700/80 text-slate-400 hover:text-slate-200 hover:bg-slate-800'
+                  }`}
+                  title={keepAliveEnabled
+                    ? 'Demo mode: pinging the backend every 4 min so it never sleeps. Click to turn off.'
+                    : 'Demo mode off — free-tier backend will sleep after 15 min idle. Click to keep it awake.'}
+                >
+                  {keepAliveEnabled ? <Zap className="w-4 h-4 animate-pulse" /> : <ZapOff className="w-4 h-4" />}
+                  <span>{keepAliveEnabled ? 'Keeping Awake' : 'Keep Awake'}</span>
+                  {keepAliveEnabled && <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>}
                 </button>
 
                 {/* Integrations */}

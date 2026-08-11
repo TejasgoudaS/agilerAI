@@ -102,17 +102,41 @@ async function callAI(systemPrompt, userContent) {
 
 /**
  * Check if the agent backend server is running.
+ *
+ * Free-tier hosts (e.g. Render) sleep after idle and can take 30-50s to wake
+ * on the first request. A short timeout here would misread "still waking up"
+ * as "unavailable" and silently drop to the client-side fallback path, which
+ * doesn't even work in production (no OpenAI key is shipped in the bundle by
+ * design — see .env.example). So this waits generously and optionally reports
+ * progress via `onWaking` so the caller can show a "waking up" message instead
+ * of looking hung.
  */
-export async function checkAgentServer() {
+export async function checkAgentServer(onWaking) {
+  const timeoutMs = 60000;
+  const wakingNoticeAfterMs = 4000; // if it hasn't resolved quickly, it's a cold start
+
+  const wakingTimer = onWaking ? setTimeout(() => onWaking(), wakingNoticeAfterMs) : null;
   try {
     const response = await axios.get('/api/health', {
-      timeout: 2000,
+      timeout: timeoutMs,
       headers: authHeaders()
     });
     return response.data?.status === 'ok';
   } catch {
     return false;
+  } finally {
+    if (wakingTimer) clearTimeout(wakingTimer);
   }
+}
+
+/**
+ * Fire-and-forget ping to start waking a sleeping free-tier backend as early
+ * as possible — call this on app mount so the cold start overlaps with the
+ * time the user spends uploading a PRD, filling in team info, etc., instead
+ * of only starting once they click "Generate."
+ */
+export function prewarmAgentServer() {
+  axios.get('/api/health', { timeout: 60000 }).catch(() => {});
 }
 
 /**

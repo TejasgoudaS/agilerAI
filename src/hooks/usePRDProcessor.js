@@ -27,7 +27,10 @@ export function usePRDProcessor() {
       store.setGlobalRisks(parsedData.globalRisks || []);
 
       // Step 2: Generate Stories via Multi-Agent Pipeline (or fallback)
-      const agentServerAvailable = await checkAgentServer();
+      store.setProcessingStep('Connecting to AI engine...');
+      const agentServerAvailable = await checkAgentServer(() => {
+        store.setProcessingStep('Waking up the AI engine — free-tier hosting sleeps when idle, this can take up to a minute...');
+      });
 
       let stories;
 

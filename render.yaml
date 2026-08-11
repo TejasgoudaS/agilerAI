@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: agiler-ai
+    runtime: docker
+    plan: free
+    dockerfilePath: ./server/Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: VITE_OPENAI_API_KEY
+        sync: false          # set manually in the Render dashboard — never commit real keys
+      - key: JWT_SECRET_KEY
+        generateValue: true  # Render generates and stores a strong random value for you
+      - key: DATABASE_URL
+        sync: false          # set to your free Neon/Supabase Postgres connection string — see DEPLOYMENT.md
+      - key: PORT
+        value: "8000"
