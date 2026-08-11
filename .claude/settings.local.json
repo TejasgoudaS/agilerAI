@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"/c/Users/t.s.sankanagoudar/AppData/Local/Programs/Python/Python312/python.exe\" -m pip install -r \"/c/Users/t.s.sankanagoudar/OneDrive - Accenture/Desktop/ai-jira/server/requirements.txt\")",
+      "Bash(\"/c/Users/t.s.sankanagoudar/AppData/Local/Programs/Python/Python312/python.exe\" -c \"import fastapi, uvicorn, crewai, dotenv, pydantic, httpx, sqlmodel, jose, passlib, cryptography; print\\('all imports OK'\\)\")",
+      "Bash(powershell -Command \"Get-CimInstance Win32_Process -Filter \\\\\"Name='python.exe'\\\\\" | Select-Object ProcessId, CommandLine | Format-List\")",
+      "Bash(npm run *)",
+      "Bash(\"/c/Users/t.s.sankanagoudar/AppData/Local/Programs/Python/Python312/python.exe\" -m pip install \"scikit-learn>=1.4.0\" \"rank-bm25>=0.2.2\")"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+Product: AI-Powered E-Commerce Platform
+Features:
+1. User Authentication (signup, login, OAuth with Google)
+2. Product Catalog with Search and Filters
+3. Shopping Cart and Wishlist
+4. Payment Gateway Integration (Stripe)
+5. Order Tracking and History
+6. Admin Dashboard for inventory management
+7. Email Notification System
+8. Mobile-responsive design
+9. Performance: page load under 2 seconds
+10. The checkout flow should be seamless (intentionally vague — triggers risk flag)

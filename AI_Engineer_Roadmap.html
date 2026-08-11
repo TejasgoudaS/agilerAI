@@ -1,0 +1,788 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>AI Engineer Roadmap</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:#1a1a2e;line-height:1.65;padding:40px 50px;max-width:850px;margin:0 auto;font-size:12.5px}
+h1{font-size:26px;font-weight:900;margin:28px 0 8px;color:#0f0f23;border-bottom:3px solid #667eea;padding-bottom:6px}
+h2{font-size:19px;font-weight:700;margin:20px 0 6px;color:#1a1a4e}
+h3{font-size:15px;font-weight:600;margin:14px 0 4px;color:#333}
+h4{font-size:13px;font-weight:600;margin:10px 0 3px;color:#444}
+p{margin:5px 0}
+ul,ol{margin:3px 0 3px 18px}
+li{margin:1.5px 0}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:11.5px}
+th,td{border:1px solid #ddd;padding:5px 8px;text-align:left}
+th{background:#667eea;color:#fff;font-weight:600}
+tr:nth-child(even){background:#f8f9ff}
+hr{border:none;border-top:2px solid #e0e0e0;margin:18px 0}
+blockquote{border-left:4px solid #667eea;padding:8px 14px;margin:10px 0;background:#f0f2ff;font-style:italic}
+code{background:#f0f0f0;padding:1px 3px;border-radius:3px;font-size:11.5px}
+@media print{body{padding:15px 25px;font-size:11px}h1{font-size:22px;break-after:avoid}h2{font-size:16px;break-after:avoid}h3{font-size:13px;break-after:avoid}table{break-inside:avoid}}
+</style></head><body><h1>🚀 3-MONTH AI ENGINEER ROADMAP</h1>
+<h3>Java Developer → AI Engineer (50 LPA Target)</h3>
+<h4>Tailored for 4 Years Java Experience | Interview-Ready | June - August 2026</h4>
+<hr>
+<h2>📋 OVERVIEW</h2>
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Focus</th>
+<th>Hours/Week</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Month 1</td>
+<td>Python + Math + ML Foundations</td>
+<td>25-30 hrs</td>
+<td>Build core AI/ML skills</td>
+</tr>
+<tr>
+<td>Month 2</td>
+<td>LLMs + RAG + NLP + Fine-tuning</td>
+<td>25-30 hrs</td>
+<td>Master GenAI stack</td>
+</tr>
+<tr>
+<td>Month 3</td>
+<td>Agentic AI + MLOps + Interview Prep</td>
+<td>25-30 hrs</td>
+<td>Job-ready portfolio</td>
+</tr>
+</tbody></table>
+<p><strong>Target Roles:</strong> AI Engineer, Agentic AI Engineer, Forward Deployed Engineer, ML Engineer, GenAI Engineer</p>
+<hr>
+<h1>🟢 MONTH 1: FOUNDATIONS (Weeks 1-4)</h1>
+<h2>Week 1: Python Mastery (Java → Python Bridge)</h2>
+<h3>Core Python (You&#39;ll learn fast coming from Java)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Python syntax differences from Java (no semicolons, indentation, dynamic typing)</li>
+<li><input disabled="" type="checkbox"> Data structures: lists, tuples, dicts, sets (vs Java Collections)</li>
+<li><input disabled="" type="checkbox"> List comprehensions, generators, iterators</li>
+<li><input disabled="" type="checkbox"> Decorators and context managers</li>
+<li><input disabled="" type="checkbox"> Type hints (similar to Java generics)</li>
+<li><input disabled="" type="checkbox"> Virtual environments (venv, conda)</li>
+<li><input disabled="" type="checkbox"> Package management (pip, poetry)</li>
+<li><input disabled="" type="checkbox"> Pythonic patterns: duck typing, EAFP vs LBYL</li>
+</ul>
+<h3>Scientific Python Stack</h3>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>NumPy</strong>: arrays, broadcasting, vectorized operations, linear algebra ops</li>
+<li><input disabled="" type="checkbox"> <strong>Pandas</strong>: DataFrames, Series, groupby, merge, pivot, apply</li>
+<li><input disabled="" type="checkbox"> <strong>Matplotlib &amp; Seaborn</strong>: plotting, visualization, EDA charts</li>
+<li><input disabled="" type="checkbox"> Jupyter Notebooks workflow</li>
+</ul>
+<h3>📝 Mini-Project: EDA on any Kaggle dataset (Titanic/Housing Prices)</h3>
+<h3>🎯 Interview Topics</h3>
+<ul>
+<li>Python vs Java differences (GIL, memory management, inheritance)</li>
+<li>Time/space complexity of Python data structures</li>
+<li>Generator vs Iterator vs List comprehension</li>
+<li><code>*args</code>, <code>**kwargs</code>, lambda functions</li>
+</ul>
+<hr>
+<h2>Week 2: Mathematics for AI/ML</h2>
+<h3>Linear Algebra (CRITICAL)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Vectors, matrices, tensors</li>
+<li><input disabled="" type="checkbox"> Matrix multiplication, transpose, inverse</li>
+<li><input disabled="" type="checkbox"> Eigenvalues &amp; eigenvectors</li>
+<li><input disabled="" type="checkbox"> Singular Value Decomposition (SVD)</li>
+<li><input disabled="" type="checkbox"> Vector spaces, basis, rank</li>
+<li><input disabled="" type="checkbox"> Dot product, cosine similarity (used everywhere in AI)</li>
+</ul>
+<h3>Probability &amp; Statistics</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Bayes&#39; theorem (foundation of ML)</li>
+<li><input disabled="" type="checkbox"> Probability distributions: Normal, Bernoulli, Poisson, Uniform</li>
+<li><input disabled="" type="checkbox"> Conditional probability, joint probability</li>
+<li><input disabled="" type="checkbox"> Maximum Likelihood Estimation (MLE)</li>
+<li><input disabled="" type="checkbox"> Hypothesis testing, p-values, confidence intervals</li>
+<li><input disabled="" type="checkbox"> Correlation vs causation</li>
+</ul>
+<h3>Calculus (Just enough)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Derivatives and partial derivatives</li>
+<li><input disabled="" type="checkbox"> Chain rule (backbone of backpropagation)</li>
+<li><input disabled="" type="checkbox"> Gradient descent intuition</li>
+<li><input disabled="" type="checkbox"> Learning rate, convergence, local minima</li>
+</ul>
+<h3>📚 Resources</h3>
+<ul>
+<li>3Blue1Brown: Essence of Linear Algebra (YouTube)</li>
+<li>StatQuest: Statistics Fundamentals (YouTube)</li>
+<li>Khan Academy: Multivariable Calculus</li>
+</ul>
+<h3>🎯 Interview Topics</h3>
+<ul>
+<li>Explain gradient descent mathematically</li>
+<li>What is cosine similarity? Where is it used?</li>
+<li>Explain Bayes&#39; theorem with an example</li>
+<li>Why do we need eigenvalues in PCA?</li>
+</ul>
+<hr>
+<h2>Week 3: Machine Learning Fundamentals</h2>
+<h3>Supervised Learning</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Linear Regression (cost function, MSE, R²)</li>
+<li><input disabled="" type="checkbox"> Logistic Regression (sigmoid, cross-entropy loss)</li>
+<li><input disabled="" type="checkbox"> Decision Trees (entropy, information gain, Gini impurity)</li>
+<li><input disabled="" type="checkbox"> Random Forests (bagging, feature importance)</li>
+<li><input disabled="" type="checkbox"> Gradient Boosting (XGBoost, LightGBM)</li>
+<li><input disabled="" type="checkbox"> Support Vector Machines (kernel trick, margin)</li>
+<li><input disabled="" type="checkbox"> K-Nearest Neighbors</li>
+</ul>
+<h3>Unsupervised Learning</h3>
+<ul>
+<li><input disabled="" type="checkbox"> K-Means Clustering (elbow method, silhouette score)</li>
+<li><input disabled="" type="checkbox"> DBSCAN</li>
+<li><input disabled="" type="checkbox"> PCA (dimensionality reduction)</li>
+<li><input disabled="" type="checkbox"> t-SNE, UMAP (visualization)</li>
+</ul>
+<h3>Core ML Concepts</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Bias-Variance tradeoff</li>
+<li><input disabled="" type="checkbox"> Overfitting vs Underfitting</li>
+<li><input disabled="" type="checkbox"> Cross-validation (K-fold, stratified)</li>
+<li><input disabled="" type="checkbox"> Feature engineering &amp; feature selection</li>
+<li><input disabled="" type="checkbox"> Regularization (L1 Lasso, L2 Ridge, ElasticNet)</li>
+<li><input disabled="" type="checkbox"> Evaluation metrics: Accuracy, Precision, Recall, F1, AUC-ROC, Confusion Matrix</li>
+<li><input disabled="" type="checkbox"> Train/Validation/Test splits</li>
+<li><input disabled="" type="checkbox"> Hyperparameter tuning (Grid Search, Random Search, Bayesian)</li>
+<li><input disabled="" type="checkbox"> Handling imbalanced datasets (SMOTE, class weights)</li>
+</ul>
+<h3>Scikit-learn Mastery</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Pipelines, transformers, estimators</li>
+<li><input disabled="" type="checkbox"> StandardScaler, MinMaxScaler, LabelEncoder, OneHotEncoder</li>
+<li><input disabled="" type="checkbox"> GridSearchCV, RandomizedSearchCV</li>
+<li><input disabled="" type="checkbox"> Model persistence (joblib, pickle)</li>
+</ul>
+<h3>📝 Project: End-to-end ML pipeline on a classification problem</h3>
+<h3>🎯 Interview Topics</h3>
+<ul>
+<li>Explain bias-variance tradeoff</li>
+<li>When to use Random Forest vs XGBoost?</li>
+<li>How does regularization prevent overfitting?</li>
+<li>Precision vs Recall: when to prioritize each?</li>
+<li>Explain cross-validation and why it matters</li>
+</ul>
+<hr>
+<h2>Week 4: Deep Learning Foundations</h2>
+<h3>Neural Network Basics</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Perceptron, multi-layer perceptrons (MLP)</li>
+<li><input disabled="" type="checkbox"> Activation functions: ReLU, Sigmoid, Tanh, Softmax, GELU, SiLU</li>
+<li><input disabled="" type="checkbox"> Forward propagation &amp; backpropagation (math)</li>
+<li><input disabled="" type="checkbox"> Loss functions: MSE, Cross-Entropy, Binary Cross-Entropy</li>
+<li><input disabled="" type="checkbox"> Optimizers: SGD, Adam, AdamW, RMSProp</li>
+<li><input disabled="" type="checkbox"> Batch normalization, layer normalization</li>
+<li><input disabled="" type="checkbox"> Dropout, weight decay</li>
+<li><input disabled="" type="checkbox"> Learning rate schedulers (cosine, warmup)</li>
+</ul>
+<h3>PyTorch (Primary Framework)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Tensors, autograd, computational graphs</li>
+<li><input disabled="" type="checkbox"> nn.Module, nn.Sequential</li>
+<li><input disabled="" type="checkbox"> Custom datasets &amp; dataloaders</li>
+<li><input disabled="" type="checkbox"> Training loops (train/eval mode)</li>
+<li><input disabled="" type="checkbox"> GPU acceleration (CUDA)</li>
+<li><input disabled="" type="checkbox"> Model saving/loading (state_dict)</li>
+<li><input disabled="" type="checkbox"> TensorBoard for visualization</li>
+</ul>
+<h3>CNNs (Understand, don&#39;t deep dive)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Convolution, pooling, stride, padding</li>
+<li><input disabled="" type="checkbox"> Common architectures: ResNet, VGG (conceptual)</li>
+</ul>
+<h3>RNNs &amp; Sequence Models (Understand limitations)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> RNN, LSTM, GRU basics</li>
+<li><input disabled="" type="checkbox"> Why they failed for long sequences (vanishing gradients)</li>
+<li><input disabled="" type="checkbox"> Why Transformers replaced them</li>
+</ul>
+<h3>📝 Project: Build a neural network from scratch in PyTorch</h3>
+<h3>🎯 Interview Topics</h3>
+<ul>
+<li>Explain backpropagation step by step</li>
+<li>Why ReLU over Sigmoid?</li>
+<li>Adam vs SGD: when to use which?</li>
+<li>What is vanishing gradient problem?</li>
+<li>Explain batch norm vs layer norm</li>
+</ul>
+<hr>
+<h1>🔵 MONTH 2: LLMs &amp; GENERATIVE AI (Weeks 5-8)</h1>
+<h2>Week 5: Transformer Architecture &amp; NLP</h2>
+<h3>The Transformer (MOST IMPORTANT TOPIC)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> &quot;Attention Is All You Need&quot; paper - read &amp; understand</li>
+<li><input disabled="" type="checkbox"> Self-attention mechanism (Q, K, V matrices)</li>
+<li><input disabled="" type="checkbox"> Multi-head attention</li>
+<li><input disabled="" type="checkbox"> Positional encoding (sinusoidal, RoPE, ALiBi)</li>
+<li><input disabled="" type="checkbox"> Encoder-decoder architecture</li>
+<li><input disabled="" type="checkbox"> Layer normalization placement (pre-norm vs post-norm)</li>
+<li><input disabled="" type="checkbox"> Feed-forward networks in transformers</li>
+<li><input disabled="" type="checkbox"> Residual connections</li>
+</ul>
+<h3>Tokenization</h3>
+<ul>
+<li><input disabled="" type="checkbox"> BPE (Byte Pair Encoding)</li>
+<li><input disabled="" type="checkbox"> WordPiece, SentencePiece</li>
+<li><input disabled="" type="checkbox"> Token limits, context windows</li>
+<li><input disabled="" type="checkbox"> tiktoken library</li>
+</ul>
+<h3>NLP Fundamentals</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Text preprocessing: tokenization, stemming, lemmatization</li>
+<li><input disabled="" type="checkbox"> Word embeddings: Word2Vec, GloVe</li>
+<li><input disabled="" type="checkbox"> Contextual embeddings (BERT vs Word2Vec)</li>
+<li><input disabled="" type="checkbox"> Named Entity Recognition (NER)</li>
+<li><input disabled="" type="checkbox"> Sentiment analysis</li>
+<li><input disabled="" type="checkbox"> Text classification</li>
+</ul>
+<h3>Key Model Architectures</h3>
+<ul>
+<li><input disabled="" type="checkbox"> BERT (encoder-only, bidirectional)</li>
+<li><input disabled="" type="checkbox"> GPT (decoder-only, autoregressive)</li>
+<li><input disabled="" type="checkbox"> T5 (encoder-decoder)</li>
+<li><input disabled="" type="checkbox"> When to use which architecture</li>
+</ul>
+<h3>Hugging Face Ecosystem</h3>
+<ul>
+<li><input disabled="" type="checkbox"> transformers library</li>
+<li><input disabled="" type="checkbox"> datasets library</li>
+<li><input disabled="" type="checkbox"> Model hub, tokenizers</li>
+<li><input disabled="" type="checkbox"> Pipeline API for inference</li>
+<li><input disabled="" type="checkbox"> AutoModel, AutoTokenizer patterns</li>
+</ul>
+<h3>🎯 Interview Topics (CRITICAL - asked in every AI interview)</h3>
+<ul>
+<li>Explain self-attention mechanism with math</li>
+<li>What is multi-head attention and why?</li>
+<li>Difference between BERT and GPT architectures</li>
+<li>How does positional encoding work?</li>
+<li>What is KV-cache and why does it matter?</li>
+<li>Explain the full transformer forward pass</li>
+</ul>
+<hr>
+<h2>Week 6: LLMs &amp; Prompt Engineering</h2>
+<h3>LLM Fundamentals</h3>
+<ul>
+<li><input disabled="" type="checkbox"> How LLMs are trained (pretraining, SFT, RLHF, DPO)</li>
+<li><input disabled="" type="checkbox"> Scaling laws (Chinchilla, compute-optimal training)</li>
+<li><input disabled="" type="checkbox"> Emergent abilities in large models</li>
+<li><input disabled="" type="checkbox"> Temperature, top-k, top-p (nucleus) sampling</li>
+<li><input disabled="" type="checkbox"> Beam search vs greedy decoding</li>
+<li><input disabled="" type="checkbox"> Context window management</li>
+<li><input disabled="" type="checkbox"> Token economics &amp; cost optimization</li>
+</ul>
+<h3>Major LLM Families (Know strengths/weaknesses)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> OpenAI: GPT-4, GPT-4o, o1, o3</li>
+<li><input disabled="" type="checkbox"> Anthropic: Claude 3.5, Claude 4 (Opus/Sonnet)</li>
+<li><input disabled="" type="checkbox"> Google: Gemini 2.5 Pro/Flash</li>
+<li><input disabled="" type="checkbox"> Meta: LLaMA 3, LLaMA 4</li>
+<li><input disabled="" type="checkbox"> Mistral: Mixtral, Mistral Large</li>
+<li><input disabled="" type="checkbox"> Open-source vs Closed-source tradeoffs</li>
+</ul>
+<h3>Prompt Engineering (Master this!)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Zero-shot, few-shot, many-shot prompting</li>
+<li><input disabled="" type="checkbox"> Chain-of-Thought (CoT) prompting</li>
+<li><input disabled="" type="checkbox"> Tree-of-Thought prompting</li>
+<li><input disabled="" type="checkbox"> ReAct (Reasoning + Acting) pattern</li>
+<li><input disabled="" type="checkbox"> System prompts, role prompting</li>
+<li><input disabled="" type="checkbox"> Output formatting (JSON mode, structured outputs)</li>
+<li><input disabled="" type="checkbox"> Prompt injection attacks &amp; defenses</li>
+<li><input disabled="" type="checkbox"> Prompt templates &amp; management</li>
+</ul>
+<h3>LLM APIs</h3>
+<ul>
+<li><input disabled="" type="checkbox"> OpenAI API (chat completions, function calling)</li>
+<li><input disabled="" type="checkbox"> Anthropic API (messages, tool use)</li>
+<li><input disabled="" type="checkbox"> Google Gemini API</li>
+<li><input disabled="" type="checkbox"> Streaming responses</li>
+<li><input disabled="" type="checkbox"> Error handling, rate limiting, retries</li>
+<li><input disabled="" type="checkbox"> Cost tracking &amp; optimization</li>
+</ul>
+<h3>📝 Project: Build a multi-LLM chatbot with streaming</h3>
+<h3>🎯 Interview Topics</h3>
+<ul>
+<li>RLHF vs DPO: explain the training pipeline</li>
+<li>How to reduce hallucinations?</li>
+<li>Prompt injection: what is it, how to prevent?</li>
+<li>Compare GPT-4 vs Claude vs Gemini for different use cases</li>
+<li>Explain temperature and sampling strategies</li>
+</ul>
+<hr>
+<h2>Week 7: RAG (Retrieval Augmented Generation)</h2>
+<h3>Vector Databases &amp; Embeddings</h3>
+<ul>
+<li><input disabled="" type="checkbox"> What are embeddings? Why do they work?</li>
+<li><input disabled="" type="checkbox"> Embedding models: OpenAI Ada, Cohere, BGE, E5</li>
+<li><input disabled="" type="checkbox"> Vector similarity: cosine, euclidean, dot product</li>
+<li><input disabled="" type="checkbox"> Vector databases: Pinecone, Weaviate, ChromaDB, Qdrant, pgvector</li>
+<li><input disabled="" type="checkbox"> Indexing: HNSW, IVF, flat index</li>
+<li><input disabled="" type="checkbox"> Metadata filtering</li>
+</ul>
+<h3>RAG Pipeline (End-to-End)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Document loading (PDF, DOCX, HTML, code)</li>
+<li><input disabled="" type="checkbox"> Text chunking strategies (fixed, recursive, semantic)</li>
+<li><input disabled="" type="checkbox"> Chunk size optimization &amp; overlap</li>
+<li><input disabled="" type="checkbox"> Embedding generation &amp; storage</li>
+<li><input disabled="" type="checkbox"> Retrieval strategies: dense, sparse, hybrid</li>
+<li><input disabled="" type="checkbox"> Re-ranking (Cohere Reranker, cross-encoders)</li>
+<li><input disabled="" type="checkbox"> Context window stuffing</li>
+<li><input disabled="" type="checkbox"> Citation &amp; source attribution</li>
+</ul>
+<h3>Advanced RAG Patterns</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Naive RAG vs Advanced RAG vs Modular RAG</li>
+<li><input disabled="" type="checkbox"> HyDE (Hypothetical Document Embeddings)</li>
+<li><input disabled="" type="checkbox"> Multi-query retrieval</li>
+<li><input disabled="" type="checkbox"> Parent-child chunking</li>
+<li><input disabled="" type="checkbox"> Sentence window retrieval</li>
+<li><input disabled="" type="checkbox"> Graph RAG (knowledge graphs + RAG)</li>
+<li><input disabled="" type="checkbox"> Self-RAG (self-reflective retrieval)</li>
+<li><input disabled="" type="checkbox"> Corrective RAG (CRAG)</li>
+<li><input disabled="" type="checkbox"> Agentic RAG</li>
+</ul>
+<h3>RAG Evaluation</h3>
+<ul>
+<li><input disabled="" type="checkbox"> RAGAS framework</li>
+<li><input disabled="" type="checkbox"> Metrics: faithfulness, relevance, context precision, context recall</li>
+<li><input disabled="" type="checkbox"> LLM-as-judge evaluation</li>
+<li><input disabled="" type="checkbox"> Human evaluation strategies</li>
+</ul>
+<h3>Frameworks</h3>
+<ul>
+<li><input disabled="" type="checkbox"> LangChain (chains, retrievers, document loaders)</li>
+<li><input disabled="" type="checkbox"> LlamaIndex (indices, query engines, response synthesizers)</li>
+</ul>
+<h3>📝 Project: Production-grade RAG system with evaluation pipeline</h3>
+<h3>🎯 Interview Topics</h3>
+<ul>
+<li>Design a RAG system for 10M documents</li>
+<li>How to handle multi-modal RAG?</li>
+<li>Chunking strategy for code vs prose vs tables</li>
+<li>How to evaluate RAG quality?</li>
+<li>When RAG fails: common failure modes and fixes</li>
+</ul>
+<hr>
+<h2>Week 8: Fine-tuning &amp; Model Customization</h2>
+<h3>Fine-tuning Approaches</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Full fine-tuning vs parameter-efficient fine-tuning</li>
+<li><input disabled="" type="checkbox"> When to fine-tune vs when to use RAG vs prompt engineering</li>
+<li><input disabled="" type="checkbox"> Dataset preparation (instruction tuning format)</li>
+<li><input disabled="" type="checkbox"> Data quality &gt; data quantity</li>
+</ul>
+<h3>PEFT Methods</h3>
+<ul>
+<li><input disabled="" type="checkbox"> LoRA (Low-Rank Adaptation) - understand the math</li>
+<li><input disabled="" type="checkbox"> QLoRA (Quantized LoRA)</li>
+<li><input disabled="" type="checkbox"> Adapters</li>
+<li><input disabled="" type="checkbox"> Prefix tuning</li>
+</ul>
+<h3>Quantization</h3>
+<ul>
+<li><input disabled="" type="checkbox"> INT8, INT4, GPTQ, AWQ, GGUF</li>
+<li><input disabled="" type="checkbox"> When to quantize, accuracy tradeoffs</li>
+<li><input disabled="" type="checkbox"> bitsandbytes library</li>
+</ul>
+<h3>Training Infrastructure</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Hugging Face Trainer API</li>
+<li><input disabled="" type="checkbox"> DeepSpeed, FSDP basics</li>
+<li><input disabled="" type="checkbox"> Weights &amp; Biases (W&amp;B) for experiment tracking</li>
+<li><input disabled="" type="checkbox"> GPU memory optimization (gradient checkpointing, mixed precision)</li>
+</ul>
+<h3>Practical Fine-tuning</h3>
+<ul>
+<li><input disabled="" type="checkbox"> SFT (Supervised Fine-Tuning)</li>
+<li><input disabled="" type="checkbox"> RLHF pipeline overview</li>
+<li><input disabled="" type="checkbox"> DPO (Direct Preference Optimization)</li>
+<li><input disabled="" type="checkbox"> Merging models (mergekit)</li>
+<li><input disabled="" type="checkbox"> Evaluation: MMLU, HumanEval, custom benchmarks</li>
+</ul>
+<h3>📝 Project: Fine-tune LLaMA/Mistral on custom dataset using QLoRA</h3>
+<h3>🎯 Interview Topics</h3>
+<ul>
+<li>RAG vs Fine-tuning: decision framework</li>
+<li>Explain LoRA mathematically</li>
+<li>How to prevent catastrophic forgetting?</li>
+<li>What is DPO and how is it better than RLHF?</li>
+<li>How to evaluate a fine-tuned model?</li>
+</ul>
+<hr>
+<h1>🔴 MONTH 3: AGENTIC AI &amp; JOB READY (Weeks 9-12)</h1>
+<h2>Week 9: Agentic AI &amp; AI Agents</h2>
+<h3>Agent Fundamentals</h3>
+<ul>
+<li><input disabled="" type="checkbox"> What is an AI agent? (perception → reasoning → action loop)</li>
+<li><input disabled="" type="checkbox"> ReAct pattern implementation</li>
+<li><input disabled="" type="checkbox"> Tool use / Function calling</li>
+<li><input disabled="" type="checkbox"> Planning &amp; reasoning strategies</li>
+<li><input disabled="" type="checkbox"> Memory: short-term (context), long-term (vector store), episodic</li>
+<li><input disabled="" type="checkbox"> Agent loops: observe → think → act → observe</li>
+</ul>
+<h3>Function Calling &amp; Tool Use</h3>
+<ul>
+<li><input disabled="" type="checkbox"> OpenAI function calling API</li>
+<li><input disabled="" type="checkbox"> Anthropic tool use API</li>
+<li><input disabled="" type="checkbox"> Defining tool schemas (JSON Schema)</li>
+<li><input disabled="" type="checkbox"> Parallel tool calling</li>
+<li><input disabled="" type="checkbox"> Error handling in tool execution</li>
+<li><input disabled="" type="checkbox"> Building custom tools</li>
+</ul>
+<h3>Agent Frameworks</h3>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>LangGraph</strong> (graph-based agent orchestration, state machines)</li>
+<li><input disabled="" type="checkbox"> <strong>CrewAI</strong> (multi-agent role-based systems)</li>
+<li><input disabled="" type="checkbox"> <strong>AutoGen</strong> (Microsoft, conversational agents)</li>
+<li><input disabled="" type="checkbox"> <strong>Semantic Kernel</strong> (Microsoft, enterprise agents)</li>
+<li><input disabled="" type="checkbox"> OpenAI Assistants API</li>
+<li><input disabled="" type="checkbox"> Agent protocol &amp; standards</li>
+</ul>
+<h3>Multi-Agent Systems</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Agent communication patterns</li>
+<li><input disabled="" type="checkbox"> Hierarchical vs flat agent structures</li>
+<li><input disabled="" type="checkbox"> Agent delegation &amp; handoff</li>
+<li><input disabled="" type="checkbox"> Consensus mechanisms</li>
+<li><input disabled="" type="checkbox"> Error recovery in multi-agent systems</li>
+</ul>
+<h3>📝 Project: Multi-agent system that researches, writes, and reviews content</h3>
+<h3>🎯 Interview Topics</h3>
+<ul>
+<li>Design an AI agent for customer support</li>
+<li>How to prevent infinite loops in agents?</li>
+<li>ReAct vs Plan-and-Execute: tradeoffs</li>
+<li>How do you handle tool errors in agents?</li>
+<li>Multi-agent vs single agent: when to use which?</li>
+</ul>
+<hr>
+<h2>Week 10: Production AI &amp; MLOps</h2>
+<h3>AI System Design</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Designing AI-powered applications architecture</li>
+<li><input disabled="" type="checkbox"> Microservices for AI (API design)</li>
+<li><input disabled="" type="checkbox"> Streaming architectures (SSE, WebSockets)</li>
+<li><input disabled="" type="checkbox"> Caching strategies for LLM responses</li>
+<li><input disabled="" type="checkbox"> Rate limiting &amp; throttling</li>
+<li><input disabled="" type="checkbox"> Cost optimization strategies</li>
+</ul>
+<h3>API Development for AI</h3>
+<ul>
+<li><input disabled="" type="checkbox"> FastAPI for AI services</li>
+<li><input disabled="" type="checkbox"> Request/response schemas (Pydantic)</li>
+<li><input disabled="" type="checkbox"> Async processing for LLM calls</li>
+<li><input disabled="" type="checkbox"> Streaming responses</li>
+<li><input disabled="" type="checkbox"> Authentication &amp; API keys management</li>
+<li><input disabled="" type="checkbox"> Error handling patterns</li>
+</ul>
+<h3>Deployment &amp; Infrastructure</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Docker for AI applications</li>
+<li><input disabled="" type="checkbox"> Model serving: vLLM, TGI, Ollama</li>
+<li><input disabled="" type="checkbox"> GPU vs CPU inference tradeoffs</li>
+<li><input disabled="" type="checkbox"> Cloud AI services: AWS Bedrock, GCP Vertex AI, Azure OpenAI</li>
+<li><input disabled="" type="checkbox"> Serverless AI (Lambda + API Gateway)</li>
+<li><input disabled="" type="checkbox"> CI/CD for ML (GitHub Actions)</li>
+</ul>
+<h3>Observability &amp; Monitoring</h3>
+<ul>
+<li><input disabled="" type="checkbox"> LLM observability: LangSmith, Langfuse, Phoenix</li>
+<li><input disabled="" type="checkbox"> Prompt versioning &amp; management</li>
+<li><input disabled="" type="checkbox"> Tracing agent execution</li>
+<li><input disabled="" type="checkbox"> Cost monitoring dashboards</li>
+<li><input disabled="" type="checkbox"> Latency tracking &amp; optimization</li>
+<li><input disabled="" type="checkbox"> A/B testing for prompts</li>
+</ul>
+<h3>Guardrails &amp; Safety</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Content filtering &amp; moderation</li>
+<li><input disabled="" type="checkbox"> Output validation (Guardrails AI, NeMo Guardrails)</li>
+<li><input disabled="" type="checkbox"> PII detection &amp; redaction</li>
+<li><input disabled="" type="checkbox"> Hallucination detection</li>
+<li><input disabled="" type="checkbox"> Responsible AI principles</li>
+</ul>
+<h3>📝 Project: Deploy your RAG + Agent system as a production API</h3>
+<h3>🎯 Interview Topics</h3>
+<ul>
+<li>Design a production LLM system handling 1000 req/s</li>
+<li>How to monitor LLM quality in production?</li>
+<li>Caching strategies for LLM responses</li>
+<li>How to handle model version upgrades?</li>
+<li>Cost optimization for LLM applications</li>
+</ul>
+<hr>
+<h2>Week 11: Advanced Topics &amp; System Design</h2>
+<h3>AI System Design (Interview focused)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Design an AI-powered search engine</li>
+<li><input disabled="" type="checkbox"> Design a code generation system (like Copilot)</li>
+<li><input disabled="" type="checkbox"> Design a document Q&amp;A system for enterprise</li>
+<li><input disabled="" type="checkbox"> Design a customer support chatbot with escalation</li>
+<li><input disabled="" type="checkbox"> Design a content moderation pipeline</li>
+<li><input disabled="" type="checkbox"> Design a recommendation system with LLMs</li>
+<li><input disabled="" type="checkbox"> Design an AI agent marketplace</li>
+</ul>
+<h3>Emerging Topics (Know conceptually)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Mixture of Experts (MoE) architecture</li>
+<li><input disabled="" type="checkbox"> Multimodal AI (vision + language)</li>
+<li><input disabled="" type="checkbox"> Voice AI (TTS, STT, real-time)</li>
+<li><input disabled="" type="checkbox"> Code generation &amp; AI coding assistants</li>
+<li><input disabled="" type="checkbox"> AI for structured data (Text-to-SQL)</li>
+<li><input disabled="" type="checkbox"> Knowledge graphs + LLMs</li>
+<li><input disabled="" type="checkbox"> Autonomous agents (Devin, OpenHands)</li>
+<li><input disabled="" type="checkbox"> Model Context Protocol (MCP)</li>
+</ul>
+<h3>Computer Science Fundamentals (You already know from Java!)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> DSA refresh in Python (LeetCode medium level)</li>
+<li><input disabled="" type="checkbox"> System design patterns for AI</li>
+<li><input disabled="" type="checkbox"> API design best practices</li>
+<li><input disabled="" type="checkbox"> Database design (SQL + NoSQL + Vector)</li>
+<li><input disabled="" type="checkbox"> Distributed systems basics</li>
+</ul>
+<h3>🎯 Interview Topics</h3>
+<ul>
+<li>End-to-end system design for AI applications</li>
+<li>Tradeoff discussions (cost vs latency vs quality)</li>
+<li>Scaling AI systems</li>
+<li>When to use AI vs traditional approaches</li>
+</ul>
+<hr>
+<h2>Week 12: Interview Preparation &amp; Portfolio</h2>
+<h3>Portfolio Projects (Pick 2-3 STRONG ones)</h3>
+<ol>
+<li><strong>Production RAG System</strong>: Multi-document Q&amp;A with evaluation, reranking, hybrid search</li>
+<li><strong>Multi-Agent Platform</strong>: CrewAI/LangGraph based system solving real business problem</li>
+<li><strong>Fine-tuned Model</strong>: Domain-specific LLM with measurable improvement</li>
+<li><strong>AI-Powered SaaS</strong>: Full-stack app with AI backend (your ai-jira project counts!)</li>
+</ol>
+<h3>Resume Optimization</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Rewrite resume with AI/ML keywords</li>
+<li><input disabled="" type="checkbox"> Quantify impact (latency reduction, accuracy improvement)</li>
+<li><input disabled="" type="checkbox"> Highlight Java→AI transition as strength (production engineering + AI)</li>
+<li><input disabled="" type="checkbox"> Include GitHub links to all projects</li>
+<li><input disabled="" type="checkbox"> Create project demo videos</li>
+</ul>
+<h3>Interview Preparation by Round</h3>
+<h4>Coding Round</h4>
+<ul>
+<li><input disabled="" type="checkbox"> Python coding (LeetCode medium, focus on strings, arrays, trees)</li>
+<li><input disabled="" type="checkbox"> ML coding: implement linear regression, k-means from scratch</li>
+<li><input disabled="" type="checkbox"> LLM coding: build a RAG pipeline in 45 minutes</li>
+<li><input disabled="" type="checkbox"> Debug a broken ML pipeline</li>
+</ul>
+<h4>ML/AI Theory Round</h4>
+<ul>
+<li><input disabled="" type="checkbox"> Transformer architecture whiteboard explanation</li>
+<li><input disabled="" type="checkbox"> ML algorithms: explain any algorithm end-to-end</li>
+<li><input disabled="" type="checkbox"> Loss functions, optimizers, regularization</li>
+<li><input disabled="" type="checkbox"> Evaluation metrics selection</li>
+</ul>
+<h4>System Design Round</h4>
+<ul>
+<li><input disabled="" type="checkbox"> AI system design framework (requirements → architecture → components → tradeoffs)</li>
+<li><input disabled="" type="checkbox"> Practice 5-6 AI system design problems</li>
+<li><input disabled="" type="checkbox"> Draw clear architecture diagrams</li>
+<li><input disabled="" type="checkbox"> Discuss monitoring, scaling, cost</li>
+</ul>
+<h4>Behavioral Round</h4>
+<ul>
+<li><input disabled="" type="checkbox"> Why AI? (Genuine story of Java → AI transition)</li>
+<li><input disabled="" type="checkbox"> Tell me about a complex system you built</li>
+<li><input disabled="" type="checkbox"> How do you stay updated with AI?</li>
+<li><input disabled="" type="checkbox"> Handling ambiguity in AI projects</li>
+</ul>
+<h3>Companies to Target (50 LPA range in India)</h3>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Companies</th>
+<th>Typical Roles</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Top Tier</td>
+<td>Google, Microsoft, Amazon</td>
+<td>AI/ML Engineer</td>
+</tr>
+<tr>
+<td>AI Startups</td>
+<td>Anthropic, OpenAI, Cohere</td>
+<td>AI Engineer</td>
+</tr>
+<tr>
+<td>Indian Unicorns</td>
+<td>Flipkart, Razorpay, Meesho, Swiggy</td>
+<td>ML/AI Engineer</td>
+</tr>
+<tr>
+<td>Product Companies</td>
+<td>Atlassian, Salesforce, Adobe</td>
+<td>AI/ML Engineer</td>
+</tr>
+<tr>
+<td>AI-First</td>
+<td>Fractal, Tiger Analytics, Quantiphi</td>
+<td>Senior AI Engineer</td>
+</tr>
+<tr>
+<td>Forward Deployed</td>
+<td>Palantir, C3.ai, DataRobot</td>
+<td>Forward Deployed Engineer</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>📚 RESOURCES</h1>
+<h3>Courses</h3>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Topic</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Andrej Karpathy&#39;s YouTube</td>
+<td>Neural Nets, GPT from scratch</td>
+<td>🔴 Must</td>
+</tr>
+<tr>
+<td>fast.ai</td>
+<td>Practical Deep Learning</td>
+<td>🔴 Must</td>
+</tr>
+<tr>
+<td>DeepLearning.AI (Andrew Ng)</td>
+<td>ML Specialization</td>
+<td>🔴 Must</td>
+</tr>
+<tr>
+<td>Hugging Face Course</td>
+<td>NLP &amp; Transformers</td>
+<td>🔴 Must</td>
+</tr>
+<tr>
+<td>LangChain Academy</td>
+<td>LangGraph &amp; Agents</td>
+<td>🟡 High</td>
+</tr>
+<tr>
+<td>Stanford CS229</td>
+<td>ML Theory</td>
+<td>🟡 High</td>
+</tr>
+<tr>
+<td>Stanford CS224N</td>
+<td>NLP</td>
+<td>🟡 High</td>
+</tr>
+</tbody></table>
+<h3>Papers to Read</h3>
+<ol>
+<li>&quot;Attention Is All You Need&quot; (Transformer)</li>
+<li>&quot;BERT: Pre-training of Deep Bidirectional Transformers&quot;</li>
+<li>&quot;Language Models are Few-Shot Learners&quot; (GPT-3)</li>
+<li>&quot;LoRA: Low-Rank Adaptation of Large Language Models&quot;</li>
+<li>&quot;Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks&quot;</li>
+<li>&quot;ReAct: Synergizing Reasoning and Acting in Language Models&quot;</li>
+<li>&quot;Chain-of-Thought Prompting Elicits Reasoning in Large Language Models&quot;</li>
+<li>&quot;Constitutional AI&quot; (Anthropic)</li>
+</ol>
+<h3>Books</h3>
+<ul>
+<li>&quot;Hands-On Machine Learning&quot; by Aurélien Géron</li>
+<li>&quot;Deep Learning&quot; by Ian Goodfellow</li>
+<li>&quot;Designing Machine Learning Systems&quot; by Chip Huyen</li>
+<li>&quot;Build a Large Language Model (From Scratch)&quot; by Sebastian Raschka</li>
+</ul>
+<h3>Communities</h3>
+<ul>
+<li>r/MachineLearning, r/LocalLLaMA</li>
+<li>Hugging Face Discord</li>
+<li>MLOps Community Slack</li>
+<li>AI Twitter/X (follow: Andrej Karpathy, Jim Fan, Chip Huyen, Yann LeCun)</li>
+</ul>
+<hr>
+<h1>🎯 DAILY SCHEDULE TEMPLATE</h1>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Activity</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>6:00 AM - 7:00 AM</td>
+<td>Theory/Course</td>
+<td>1 hr</td>
+</tr>
+<tr>
+<td>7:00 AM - 8:00 AM</td>
+<td>Coding Practice</td>
+<td>1 hr</td>
+</tr>
+<tr>
+<td>9:00 AM - 6:00 PM</td>
+<td>Day Job</td>
+<td>9 hrs</td>
+</tr>
+<tr>
+<td>7:00 PM - 9:00 PM</td>
+<td>Hands-on Projects</td>
+<td>2 hrs</td>
+</tr>
+<tr>
+<td>9:00 PM - 9:30 PM</td>
+<td>Read Papers/Blogs</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td><strong>Weekends</strong></td>
+<td><strong>Deep Project Work</strong></td>
+<td><strong>6-8 hrs</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h1>🏆 SUCCESS METRICS</h1>
+<h3>Month 1 Checkpoint</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Can implement any ML algorithm from scratch</li>
+<li><input disabled="" type="checkbox"> Comfortable with PyTorch</li>
+<li><input disabled="" type="checkbox"> Can explain gradient descent, backprop mathematically</li>
+<li><input disabled="" type="checkbox"> Completed 1 end-to-end ML project</li>
+</ul>
+<h3>Month 2 Checkpoint</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Can explain transformer architecture on whiteboard</li>
+<li><input disabled="" type="checkbox"> Built a production RAG system</li>
+<li><input disabled="" type="checkbox"> Fine-tuned a model with LoRA</li>
+<li><input disabled="" type="checkbox"> Comfortable with LangChain/LlamaIndex</li>
+<li><input disabled="" type="checkbox"> Can use multiple LLM APIs</li>
+</ul>
+<h3>Month 3 Checkpoint (JOB READY!)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Built a multi-agent AI system</li>
+<li><input disabled="" type="checkbox"> Can design AI systems from scratch</li>
+<li><input disabled="" type="checkbox"> Portfolio has 3+ strong projects on GitHub</li>
+<li><input disabled="" type="checkbox"> Can pass AI system design interviews</li>
+<li><input disabled="" type="checkbox"> Resume is AI-optimized</li>
+<li><input disabled="" type="checkbox"> Applied to 50+ positions</li>
+</ul>
+<hr>
+<blockquote>
+<p><strong>Remember</strong>: Your 4 years of Java experience is a MASSIVE advantage. Most AI engineers can&#39;t build production systems. You can. That&#39;s your superpower. Combine production engineering skills with AI knowledge = unstoppable. 🚀</p>
+</blockquote>
+<p><em>Created: June 2026 | Target: September 2026</em></p>
+</body></html>
